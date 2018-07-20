@@ -15,10 +15,7 @@ if ($row['user'] == $username AND $row['pass'] == $pass)
 }
 else
 {
-  echo "<center><br><br><br><br><br><br><b>LOGIN GAGAL! </b><br>
-        Username atau Password Anda tidak benar.<br>";
-    echo "<br>";
-  echo "<input class='btn btn-blue' type=button value='ULANGI LAGI' onclick=location.href='login.php'></a></center>";
+  echo "<script>alert('Silahkan cek kembali data login anda');history.go(-1);</script>";
 
 }
 ?>
