@@ -6,6 +6,7 @@ $p = "tambah";
 <?php include "include/header.php";?>
 </div>
 </div>
+</div>
 			<div class="page-header">
 			<?php
 			session_start();
@@ -14,7 +15,9 @@ $p = "tambah";
                                       <a href='login.php?p=$p'><center>Login</center></a>";
 									  exit(404);
                           }?>
-          <div class="col-lg-6">
+			<div class="col-lg-12">
+            <h2>Tambah Barang</h2>
+          
             <form action="tambah_b.php" method="post">
 			<script type="text/javascript" src="include/rp.js"></script>
 					<div class="form-group">
@@ -25,18 +28,21 @@ $p = "tambah";
 					<label>Harga per Barang</label>
 					<div class="input-group">
                     <span class="input-group-addon">Rp.</span>
-                    <input name="harga" type="text" class="form-control" placeholder="Harga layanan ..">
+                    <input name="harga" type="number" class="form-control" placeholder="Harga layanan ..">
                   </div>					
-
+				<br>
+				<br>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
 					<input type="submit" class="btn btn-primary" value="Simpan">
 				</div>
 			</form>
+			</div>
+			</div>
 
 			<div class="col-lg-12">
-            <h2>Daftar Harga</h2>
+            <h2>Daftar Barang</h2>
           </div>
 			<?php
 			//membuat query membaca record dari tabel User    
@@ -74,7 +80,7 @@ $p = "tambah";
    }  
    echo "</table>";  
  }    
- else echo "Tidak ada Record didalam tabel";    
+ else echo "<center><b>Tidak ada Data</b></center>";    
 
  ?>  
           </div>
